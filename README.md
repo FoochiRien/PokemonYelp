@@ -11,38 +11,36 @@ This is an app I worked on with other members of General Assembly for a group pr
 </p>
 
 <p align="left">
-<img src="images/final capture.jpg" height="300px" /> <img src="images/final-pokedex" height="300px" />
+<img src="images/final capture.jpg" height="300px" /> <img src="images/final-pokedex.jpg" height="300px" />
 </p>
 
 ## App features
 
-- The app works very similar to Amazon. (I copied a lot of elements from the Amazon UI)
-- User can view items in the store.
-- Add items to cart, delete items in cart or checkout
-- Search for items by name and type
-- See and read comments and ratings left by others
-- Write his/her comments.
+- The app uses the Yelp API and the Pokemon API
+- Search for Yelp businesses, just like a real Yelp App!
+- Scan and catch pokemon
+- View their pokemon collection
 
 ## Programming structure
 
-- The app relies very heavily on databases
-- There are three main database "weapons", "weapon_types" and "elements" that supply the "store" with the items it needs
-- The databases are connected by foreign keys
-- This app uses activities mostly with animations turned off to accomadate a professional "store" app, and allows it to run smoothly
+- The app relies very heavily on API calls and google's location services
+- Databases are used to persist user's pokemon collections and the pokemon locations
+- A job scheduler is used to wipe pokemon locations every 30 minutes
 
 ## Copyright issues
 
-- Most of the item pictures for this app was taken off the internet.
-- I copied the aethetic and UI of the amazon app and website. I did NOT copy any of their images, but made my own logo.
+- Nintendo will most likely sue us immediately. That is why this is not in the playstore.
+- We used yelp's UI and Api but followed their display guidelines very strictly.
 
 ## Future plans
 
-- I will be making the "Game" aspect of the app
-- That aspect WILL have a lot more animations and cool stuff
-- I will be migrating the database to the cloud, or maybe use an API of some sort to get a list of weapons
-- As weapon lists grow, I will be implementing a filter function
+- Implementing a google games service to keep track of highscores (We tried to do one in the time limit but it only worked half the time)
+- Use Firebase to persist user's pokemon collection in the cloud, so users can keep their collection even after the uninstall the game
+- Use more logic so pokemon appearances make more sense. (Fighting types only appear at gyms, etc) and prevent rarer pokemon from showing up too frequently. (Right now, you can find a mew as easily as a pidgey, that is unacceptable.)
 
 ## Known issues
 
-- Picasso reloads everytime the recyclerview adds or deletes views. I need to add some logic to prevent this
-- In the item detail view, the selection boxes look different depending on the version of Android. 
+- Due to the uncertain nature of APIs, the app will sometimes load very slowly and pokemon scanning may not work all the time
+- Yelp Token expires after a few hours and all the yelp functions will stop working until app is restarted
+- Location service is not 100% predictable. Sometimes you could be sitting in the store a pokemon is at and not be able to capture it
+- App crashes sometimes when the Yelp Api does not return something valid. (like empty coordinates)
