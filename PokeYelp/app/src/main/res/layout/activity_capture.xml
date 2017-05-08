@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/machine_vertical"
+    android:padding="20dp"
     tools:context="pokeyelp.grat.team.pokemonyelp.activity_capture.CaptureActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/capture_pokemon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/pokemon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Pokemon Name"
+        android:textStyle="bold"
+        android:textColor="@color/machineBlue"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/capture_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/box_machine"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/capture_button"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+
+
+</FrameLayout>
