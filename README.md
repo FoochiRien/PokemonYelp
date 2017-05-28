@@ -8,9 +8,6 @@ This is an app I worked on with other members of General Assembly for a group pr
 
 <p align="left">
 <img src="images/final search.jpg" height="300px" /> <img src="images/final detail1.jpg" height="300px" /> <img src="images/final-detail3.jpg" height="300px" /> 
-</p>
-
-<p align="left">
 <img src="images/final capture.jpg" height="300px" /> <img src="images/final-pokedex.jpg" height="300px" />
 </p>
 
